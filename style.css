@@ -1,4 +1,6 @@
-/* General Reset */
+/* -------------------------- */
+/* General Reset & Fonts */
+/* -------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +8,9 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Body & background */
+/* -------------------------- */
+/* Body & Background */
+/* -------------------------- */
 body {
     background: linear-gradient(135deg, #007bff, #00b4d8);
     color: white;
@@ -15,7 +19,9 @@ body {
     background-size: cover;
 }
 
+/* -------------------------- */
 /* Navigation */
+/* -------------------------- */
 nav {
     position: sticky;
     top: 0;
@@ -27,6 +33,7 @@ nav {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     z-index: 10;
 }
+
 nav a {
     color: #eaf6ff;
     text-decoration: none;
@@ -34,26 +41,38 @@ nav a {
     font-weight: 600;
     transition: 0.3s;
 }
+
 nav a:hover {
     color: #cde9ff;
 }
 
+/* Active nav */
+nav a.active {
+    border-bottom: 2px solid white;
+    padding-bottom: 4px;
+}
+
+/* -------------------------- */
 /* Header */
+/* -------------------------- */
 header {
     text-align: center;
     padding: 100px 20px 60px 20px;
 }
+
 header img {
     width: 120px;
     border-radius: 50%;
     box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
     margin-bottom: 20px;
 }
+
 header h1 {
     font-size: 2.8em;
     margin-bottom: 10px;
     letter-spacing: 1px;
 }
+
 header p {
     font-size: 1.1em;
     opacity: 0.95;
@@ -62,32 +81,42 @@ header p {
     line-height: 1.7;
 }
 
+/* -------------------------- */
 /* Glass Box Section */
+/* -------------------------- */
 .glass-box {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(25px);
     border-radius: 20px;
     padding: 40px;
-    margin: 40px 20px;
+    margin: 40px auto;
     max-width: 900px;
     text-align: center;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Section headings and paragraphs */
-h1 {
-    font-size: 2.4em;
-    margin-bottom: 15px;
+/* Headings inside glass box */
+.glass-box h1, .glass-box h2, .glass-box h3 {
+    color: #ffffff;
 }
-p {
-    text-align: center;
+
+/* Blog readability */
+.glass-box p {
+    text-align: left;
     font-size: 1.1em;
     line-height: 1.8;
     opacity: 0.95;
     margin-bottom: 20px;
 }
 
+/* Headings hierarchy */
+h1 { font-size: 2.4em; margin-bottom: 15px; }
+h2 { font-size: 1.8em; margin: 30px 0 10px; }
+h3 { font-size: 1.4em; margin: 20px 0 8px; }
+
+/* -------------------------- */
 /* Buttons */
+/* -------------------------- */
 .btn {
     display: inline-block;
     background: rgba(255, 255, 255, 0.15);
@@ -99,11 +128,14 @@ p {
     border: 1px solid rgba(255, 255, 255, 0.3);
     transition: 0.3s;
 }
+
 .btn:hover {
     background: rgba(255, 255, 255, 0.25);
 }
 
+/* -------------------------- */
 /* Videos iframe */
+/* -------------------------- */
 iframe {
     width: 100%;
     height: 315px;
@@ -112,7 +144,9 @@ iframe {
     margin-bottom: 20px;
 }
 
+/* -------------------------- */
 /* Footer */
+/* -------------------------- */
 footer {
     text-align: center;
     padding: 20px;
@@ -121,12 +155,15 @@ footer {
     opacity: 0.9;
 }
 
+/* -------------------------- */
 /* Responsive */
+/* -------------------------- */
 @media(max-width: 768px) {
-    h1 {
+    header h1 {
         font-size: 2.2em;
     }
+
     iframe {
-        height: 200px;
+        height: 180px;
     }
 }
