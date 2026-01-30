@@ -5,40 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blogs | Duck’s Mathematics</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Duck's Mathematics Blogs — coming soon! Exciting science and math content will be added shortly.">
-
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  
   <style>
-    /* Small animation for "Coming Soon" */
+    /* Subtle fade-in animation for the coming soon message */
     .coming-soon {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 300px;
+      min-height: 250px;
       text-align: center;
       color: #ffffff;
-      font-size: 1.5em;
-      gap: 20px;
-      animation: floatText 2s ease-in-out infinite alternate;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
     }
 
-    .coming-soon span {
-      color: #00ffff;
-      font-weight: 600;
-      animation: blink 1.5s infinite;
+    .coming-soon h2 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
     }
 
-    @keyframes floatText {
-      0% { transform: translateY(0px); }
-      100% { transform: translateY(-10px); }
+    .coming-soon p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      max-width: 500px;
+      color: #eaf6ff;
     }
 
-    @keyframes blink {
-      0%, 50%, 100% { opacity: 1; }
-      25%, 75% { opacity: 0.3; }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -52,9 +50,10 @@
 
 <section class="glass-box">
   <h1>Duck’s Mathematics Blogs</h1>
+  
   <div class="coming-soon">
-    <p>Our amazing blogs will be added soon!</p>
-    <span>Stay tuned ✨</span>
+    <h2>Blogs Coming Soon</h2>
+    <p>We are preparing some amazing science and mathematics content for you. Stay tuned. exciting blogs will appear here shortly!</p>
   </div>
 </section>
 
